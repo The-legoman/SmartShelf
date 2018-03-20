@@ -11,8 +11,8 @@
 
 #define AIO_SERVER      "52.70.203.194"//"io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "the_legoman"
-#define AIO_KEY         "73195e98dcf848ba921ce35822f2f17b"
+#define AIO_USERNAME    "YOUR USERNAME HERE"
+#define AIO_KEY         "YOUR AIO KEY HERE"
 
 /************ Global State (you don't need to change this!) ******************/
 
@@ -99,8 +99,8 @@ void toggleCallback(char *data, uint16_t len) {
 //-------------------VARIABLES GLOBALES--------------------------
 int contconexion = 0;
 
-const char *ssid = "JaramilloR";
-const char *password = "d@sajuto2018";
+const char *ssid = "SSID HERE";
+const char *password = "WIFI PASSWORD";
 
 unsigned long previousMillis = 0;
 
@@ -199,7 +199,7 @@ void loop() {
   if (digitalRead(14) == 0) {
     strPulsador = "ON";
     HTTPClient http;
-    http.begin("https://maker.ifttt.com/trigger/button_pressed/with/key/d9KqeOd0ZUkexUG9Dx1gkNInu9SSmj6pYwmHel6ViBs");
+    http.begin("LINK FOR THE HTTP FUNCTION USE IFTTT");
     http.addHeader("Button press", "the button has been pressed");
     http.POST("title=foo&body=bar&userId=1");
     http.writeToStream(&Serial);
@@ -229,7 +229,7 @@ void loop() {
 if (digitalRead(4) == 0) {
     strPulsador1 = "ON1";
     HTTPClient http;
-    http.begin("https://maker.ifttt.com/trigger/button1_pressed/with/key/d9KqeOd0ZUkexUG9Dx1gkNInu9SSmj6pYwmHel6ViBs");
+    http.begin("LINK FOR THE HTTP FUNCTION USE IFTTTs");
     http.addHeader("Button press1", "the button1 has been pressed");
     http.POST("title=foo&body=bar&userId=1");
     http.writeToStream(&Serial);
@@ -260,7 +260,7 @@ if (digitalRead(4) == 0) {
 if (digitalRead(0) == 0) {
     strPulsador2 = "ON2";
     HTTPClient http;
-    http.begin("https://maker.ifttt.com/trigger/button2_pressed/with/key/d9KqeOd0ZUkexUG9Dx1gkNInu9SSmj6pYwmHel6ViBs");
+    http.begin("LINK FOR THE HTTP FUNCTION USE IFTTT");
     http.addHeader("Button press2", "the button2 has been pressed");
     http.POST("title=foo&body=bar&userId=1");
     http.writeToStream(&Serial);
@@ -292,7 +292,7 @@ if (digitalRead(0) == 0) {
 if (digitalRead(2) == 0) {
     strPulsador2 = "ON3";
     HTTPClient http;
-    http.begin("https://maker.ifttt.com/trigger/button3_pressed/with/key/d9KqeOd0ZUkexUG9Dx1gkNInu9SSmj6pYwmHel6ViBs");
+    http.begin("LINK FOR THE HTTP FUNCTION USE IFTTT");
     http.addHeader("Button press3", "the button3 has been pressed");
     http.POST("title=foo&body=bar&userId=1");
     http.writeToStream(&Serial);
